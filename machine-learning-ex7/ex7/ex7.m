@@ -44,7 +44,7 @@ fprintf(' %d', idx(1:3));
 fprintf('\n(the closest centroids should be 1, 3, 2 respectively)\n');
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+%pause;
 
 %% ===================== Part 2: Compute Means =========================
 %  After implementing the closest centroids function, you should now
@@ -63,7 +63,7 @@ fprintf('   [ 5.813503 2.633656 ]\n');
 fprintf('   [ 7.119387 3.616684 ]\n\n');
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+%pause;
 
 
 %% =================== Part 3: K-Means Clustering ======================
@@ -93,7 +93,7 @@ initial_centroids = [3 3; 6 2; 8 5];
 fprintf('\nK-Means Done.\n\n');
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+%pause;
 
 %% ============= Part 4: K-Means Clustering on Pixels ===============
 %  In this exercise, you will use K-Means to compress an image. To do this,
@@ -106,7 +106,7 @@ pause;
 fprintf('\nRunning K-Means clustering on pixels from an image.\n\n');
 
 %  Load an image of a bird
-A = double(imread('bird_small.png'));
+A = double(imread('pel.png'));
 
 % If imread does not work for you, you can try instead
 %   load ('bird_small.mat');
@@ -114,7 +114,7 @@ A = double(imread('bird_small.png'));
 A = A / 255; % Divide by 255 so that all values are in the range 0 - 1
 
 % Size of the image
-img_size = size(A);
+img_size = size(A)
 
 % Reshape the image into an Nx3 matrix where N = number of pixels.
 % Each row will contain the Red, Green and Blue pixel values
