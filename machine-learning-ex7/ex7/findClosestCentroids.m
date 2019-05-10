@@ -21,7 +21,21 @@ idx = zeros(size(X,1), 1);
 % Note: You can use a for-loop over the examples to compute this.
 %
 
+for example_i = 1:size(X)
+  x_i = X(example_i,:);
+  d_min = 100000000;
 
+  for centroid_i = 1:size(centroids,1)
+    c_i = centroids(centroid_i,:);
+
+    di = (x_i - c_i) * (x_i - c_i)';
+    if di < d_min
+      d_min = di;
+      idx(example_i) = centroid_i;
+    endif
+  endfor
+
+endfor
 
 
 

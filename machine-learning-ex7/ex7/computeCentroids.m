@@ -26,9 +26,15 @@ centroids = zeros(K, n);
 % Note: You can use a for-loop over the centroids to compute this.
 %
 
+for ci = 1:K
 
+  rel_indeces = find(idx == ci);
+  rel_points = X(rel_indeces,:);
+  points_count = size(rel_indeces)(1);
 
+  centroids(ci,:) = sum(rel_points) / points_count;
 
+endfor
 
 
 
