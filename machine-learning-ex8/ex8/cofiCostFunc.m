@@ -46,7 +46,9 @@ M = (X * Theta' - Y) .* R;
 
 J = sum(sum( (1/2) * M .* M ));
 
+X_grad = M * Theta;
 
+Theta_grad = M' * X;
 
 
 
