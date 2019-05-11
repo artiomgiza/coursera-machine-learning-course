@@ -50,10 +50,13 @@ X_grad = M * Theta;
 
 Theta_grad = M' * X;
 
+J = J + ...
+        (lambda/2) * sum(sum(Theta .* Theta)) + ...
+        (lambda/2) * sum(sum(X .* X));
 
+X_grad = X_grad + lambda * X;
 
-
-
+Theta_grad = Theta_grad + lambda * Theta;
 
 % =============================================================
 
